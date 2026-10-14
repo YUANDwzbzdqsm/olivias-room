@@ -1,0 +1,50 @@
+// Official cover art (low-resolution copies hosted by Wikipedia). Covers © Geffen Records.
+const WP = 'https://upload.wikimedia.org/wikipedia/en/';
+
+export const ALBUMS = {
+  sour: {
+    title: 'SOUR',
+    kind: '录音室专辑 · Studio album',
+    date: '2021-05-21',
+    label: 'Geffen',
+    color: '#8b5fc6',
+    cover: WP + 'b/b2/Olivia_Rodrigo_-_SOUR.png',
+    page: 'https://en.wikipedia.org/wiki/Sour_(album)',
+    tracks: ['brutal', 'traitor', 'drivers license', '1 step forward, 3 steps back', 'deja vu', 'good 4 u',
+      'enough for you', 'happier', 'jealousy, jealousy', 'favorite crime', 'hope ur ok'],
+  },
+  guts: {
+    title: 'GUTS',
+    kind: '录音室专辑 · Studio album',
+    date: '2023-09-08',
+    label: 'Geffen',
+    color: '#6f3fa8',
+    cover: WP + '0/03/Olivia_Rodrigo_-_Guts.png',
+    page: 'https://en.wikipedia.org/wiki/Guts_(album)',
+    tracks: ['all-american bitch', 'bad idea right?', 'vampire', 'lacy', 'ballad of a homeschooled girl',
+      'making the bed', 'logical', 'get him back!', 'love is embarrassing', 'the grudge',
+      "pretty isn't pretty", 'teenage dream'],
+  },
+  ysps: {
+    title: 'you seem pretty sad for a girl so in love',
+    kind: '录音室专辑 · Studio album',
+    date: '2026-06-12',
+    label: 'Geffen',
+    color: '#9cc7ea',
+    cover: WP + '1/18/Olivia_Rodrigo_-_You_Seem_Pretty_Sad_for_a_Girl_So_in_Love.png',
+    page: 'https://en.wikipedia.org/wiki/You_Seem_Pretty_Sad_for_a_Girl_So_in_Love',
+    tracks: ['drop dead', 'stupid song', 'honeybee', 'maggots for brains', 'u + me = <3', 'my way', 'purple',
+      'the cure', 'begged', "what's wrong with me (with Robert Smith)", 'less', 'expectations',
+      'cigarette smoke'],
+  },
+  dropdead: {
+    title: 'drop dead',
+    kind: '单曲 · Single',
+    date: '2026-04-17',
+    label: 'Geffen',
+    color: '#f5b8cc',
+    cover: WP + '6/64/Olivia_Rodrigo_-_Drop_Dead.png',
+    page: 'https://en.wikipedia.org/wiki/Drop_Dead_(Olivia_Rodrigo_song)',
+    tracks: ['drop dead'],
+  },
+};

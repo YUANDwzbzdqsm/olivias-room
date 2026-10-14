@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Olivia's Room</title>
+  <meta name="description" content="一个卡通风格的 3D Olivia Rodrigo 粉丝房间：墙上是真实照片，地上是真实专辑。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat+Brush&family=DM+Serif+Display:ital@0;1&family=Fredoka:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene" aria-label="3D 房间：可拖动旋转，点击海报和专辑查看详情"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="brand">
+    <h1>olivia's room</h1>
+    <p>a tiny 3D fan bedroom ✦ 真实照片 · 真实专辑</p>
+  </header>
+
+  <nav class="tools">
+    <button id="night" class="chip" aria-pressed="false" aria-label="夜晚模式"><b aria-hidden="true">☾</b><span>夜晚</span></button>
+    <button id="reset" class="chip" aria-label="复位视角"><b aria-hidden="true">↺</b><span>复位</span></button>
+    <button id="creditsBtn" class="chip" aria-label="图片来源"><b aria-hidden="true">✦</b><span>图片来源</span></button>
+  </nav>
+
+  <p id="hint" class="hint">拖动看看房间 · 点海报和地上的专辑 · 台灯、手机、贝斯、兔子都能点</p>
+  <div id="tip" class="tip" role="status"></div>
+
+  <aside id="card" class="card" hidden>
+    <button class="close" aria-label="关闭">×</button>
+    <div class="card-media"><img alt=""></div>
+    <div class="card-body">
+      <p class="eyebrow"></p>
+      <h2></h2>
+      <p class="meta"></p>
+      <ol class="tracks"></ol>
+      <p class="credit"></p>
+    </div>
+  </aside>
+
+  <div id="credits" class="modal" hidden>
+    <section class="sheet" role="dialog" aria-labelledby="credits-title">
+      <button class="close" aria-label="关闭">×</button>
+      <h2 id="credits-title">图片来源</h2>
+      <p>墙上的照片来自 Wikimedia Commons（公有领域或 CC BY 授权），点击可查看原图页面：</p>
+      <ul></ul>
+      <p>专辑与单曲封面（SOUR、GUTS、you seem pretty sad for a girl so in love、drop dead）© Geffen Records，低分辨率版本取自 Wikipedia，仅作非商业粉丝用途。</p>
+      <p>房间布局参考了一张署名 “Lid Thom” 的粉丝插画。其余物件都是用 three.js 程序化建模的。</p>
+    </section>
+  </div>
+
+  <div id="loader" class="loader">
+    <div class="loader-box">
+      <div class="loader-star" aria-hidden="true">★</div>
+      <p>正在把海报贴上墙…</p>
+      <p class="count">0 / 0</p>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
